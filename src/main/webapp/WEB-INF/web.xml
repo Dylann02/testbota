@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+version="2.4">
+
+<display-name>formulaire</display-name>
+<servlet>
+    <servlet-name>FrontController</servlet-name>
+    <servlet-class>src.controller.FrontControllerServlet</servlet-class> 
+    <!-- <init-param>
+            <param-name>PackageInit</param-name>
+            <param-value>test</param-value>
+    </init-param> -->
+</servlet>
+    <context-param>
+        <param-name>PackageInit</param-name>
+        <param-value>test</param-value>
+</context-param>
+ <context-param>
+        <param-name>prefix</param-name>
+        <param-value>/WEB-INF/views/</param-value>
+</context-param>
+ <context-param>
+        <param-name>suffix</param-name>
+        <param-value>.jsp</param-value>
+</context-param>
+    <listener>
+        <listener-class>src.utils.Listner</listener-class>
+    </listener>
+
+<servlet-mapping>
+    <servlet-name>FrontController</servlet-name>
+    <url-pattern>/</url-pattern>
+</servlet-mapping>
+</web-app> 
